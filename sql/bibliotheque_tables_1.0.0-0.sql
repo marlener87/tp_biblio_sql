@@ -1,8 +1,10 @@
+BEGIN;
 
 CREATE TABLE IF NOT EXISTS `release` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `release` varchar(20) NOT NULL,
-  `date` date NOT NULL
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `release`(`release`,`date`) VALUES ("1.0.0-0",now());
@@ -112,3 +114,5 @@ BEGIN
     END IF;    
 END $$
 DELIMITER ;
+
+COMMIT
