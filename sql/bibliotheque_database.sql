@@ -1,10 +1,9 @@
 /* Detruire la bdd et l'utilisateur */
-DROP DATABASE bibliotest;
-DROP USER 'marleneusr'@'localhost';
-
+DROP DATABASE IF EXISTS bibliotheque;
+DROP USER IF EXISTS 'bibliothequeusr'@'localhost';
 
 /* Créer la bdd et l'utilisateur */
-CREATE DATABASE bibliotest;
+CREATE DATABASE bibliotheque;
 
-CREATE USER 'marleneusr'@'localhost' IDENTIFIED BY 'marlenepwd';
-GRANT ALL PRIVILEGES ON bibliotest.* TO 'marleneusr'@'localhost';
+CREATE USER 'bibliothequeusr'@'localhost' IDENTIFIED BY 'bibliothequepwd';
+GRANT ALL PRIVILEGES ON bibliotheque.* TO 'bibliothequeusr'@'localhost';
